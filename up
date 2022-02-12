@@ -76,9 +76,6 @@ elif [ -x "$(command -v compton)" ]; then
   compton --config $HOME/.config/leftwm/themes/current/compton.conf &> /dev/null &
 fi
 
-# Set the theme.toml config
-leftwm-command "LoadTheme $SCRIPTPATH/theme.toml"
-
 #mainbar
 index=0
 monitors=($(polybar -m | sed s/:.*//))
