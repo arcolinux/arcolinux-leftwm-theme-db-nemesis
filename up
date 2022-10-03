@@ -19,12 +19,12 @@ sh $SCRIPTPATH/scripts/wal.sh
 keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
 if [ $keybLayout = "be" ]; then
-  cp ~/.config/leftwm/config-azerty.toml ~/.config/leftwm/config.toml
+  cp ~/.config/leftwm/config-azerty.ron ~/.config/leftwm/config.ron
 else
-  cp ~/.config/leftwm/config-qwerty.toml ~/.config/leftwm/config.toml
+  cp ~/.config/leftwm/config-qwerty.ron ~/.config/leftwm/config.ron
 fi
 
-leftwm-command "LoadTheme "$SCRIPTPATH"/config.toml"
+leftwm command "LoadTheme $SCRIPTPATH/theme.ron"
 
 # keybindings daemon
 # put your personal keybinds inside your theme and use those
