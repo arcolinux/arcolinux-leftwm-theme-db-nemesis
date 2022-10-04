@@ -20,8 +20,6 @@ keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
 if [ $keybLayout = "be" ]; then
   cp ~/.config/leftwm/config-azerty.ron ~/.config/leftwm/config.ron
-else
-  cp ~/.config/leftwm/config-qwerty.ron ~/.config/leftwm/config.ron
 fi
 
 leftwm command "LoadTheme $SCRIPTPATH/theme.ron"
