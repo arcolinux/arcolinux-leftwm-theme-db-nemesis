@@ -76,6 +76,11 @@ elif [ -x "$(command -v compton)" ]; then
   compton --config $HOME/.config/leftwm/themes/current/compton.conf &> /dev/null &
 fi
 
+# Set background
+#if [ -x "$(command -v feh)" ]; then
+#  feh --randomize --bg-fill /usr/share/backgrounds/*
+#fi
+
 #mainbar
 index=0
 monitors=($(polybar -m | sed s/:.*//))
